@@ -5,5 +5,28 @@
 		<script type="text/javascript" src="./script.js"></script>
 	<HEAD>
 	<BODY>
+		<center>
+			<div class="main">
+				<!-- chat A -->
+				<div class="chat">
+					<label for="chatA">Chat A</label><br/>
+					<TextArea id="chatA" name="chatA" rows="25" cols="30" readonly></textarea>
+					<form id="sendTextToB" name="sendTextToB">
+						<input type="text" id="textToB" name="textToB" />
+						<input type="submit" value="Ok">
+					</form>
+				</div>
+				
+				<!-- chat B -->
+				<div class="chat">
+					<label for="chatB">Chat B</label><br/>
+					<TextArea id="chatB" name="chatB" rows="25" cols="30" readonly ></textarea>
+					<form id="sendTextToA" name="sendTextToA">
+						<input type="text" id="textToA" name="textToA" />
+						<input type="submit" value="Ok">
+					</form>
+				</div>
+			</div>
+		</center>
 	</BODY>
 </HTML>

@@ -1,0 +1,8 @@
+body {font-family: arial;}
+
+.main{ 
+	background-color:#bbbbbb;
+	display: inline-block;
+	text-align: center;
+}
+.chat{float:left;}

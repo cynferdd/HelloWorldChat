@@ -11,7 +11,7 @@ function interceptAndSendData(formName, source, target){
 	var formElem = document.getElementById(formName);
 	
 	if(formElem != null){
-		document.getElementById(formName).addEventListener('submit',function(e) {
+		formElem.addEventListener('submit',function(e) {
 			
 		  e.preventDefault(); 
 		  var sourceElem = document.getElementById(source);

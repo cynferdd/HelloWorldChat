@@ -8,15 +8,26 @@ window.addEventListener("load",function() {
 
 // Intercepting form submit and sending text to the target textarea
 function interceptAndSendData(formName, source, target){
-	document.getElementById(formName).addEventListener('submit',function(e) {
-      e.preventDefault(); 
-      sendText(document.getElementById(source).value, document.getElementById(target));
-  });
+	var formElem = document.getElementById(formName);
+	
+	if(formElem != null){
+		document.getElementById(formName).addEventListener('submit',function(e) {
+			
+		  e.preventDefault(); 
+		  var sourceElem = document.getElementById(source);
+		  var targetElem = document.getElementById(target);
+		  
+		  if(sourceElem != null && targetElem){
+			sendText(sourceElem.value, targetElem);
+		  }
+		  
+	  });
+	}
 }
 
 // append text to target value
 function sendText (text, target){
-	if (text != null && text != ''){
+	if (target != null && text != null && text != ''){
 		target.value += text + '\r\n';
 	}
 }
